@@ -6,5 +6,10 @@ const factorial = (number) => {
   return factorial(number - 1) * number;
 }
 
-
-console.log(factorial(5))
+const greatCommonDemoniator = (num1, num2) => {
+  if(!b){
+    return a;
+  }
+  return greatCommonDemoniator(b, a % b);
+}
+console.log(greatCommonDemoniator(5, 10))
