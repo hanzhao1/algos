@@ -63,18 +63,6 @@ class LinkedList {
       currentNode = currentNode.next;
     }
   }
-
 }
 
 
-const list = new LinkedList();
-list.add(1)
-list.add(2)
-list.add(4)
-list.add(9)
-
-
-// console.log(list.searchNodeAt(3))
-console.log(list.remove(9))
-
-console.log(list.iterate((a)=>{console.log(a)}))
