@@ -14,10 +14,18 @@
   *  /
   * * <- leaf
   *
+          3
+        /   \
+      9      20
+            /   \
+          15      7
 **/
 
-const countLeaves = (tree) => {
-  console.log(tree)
+const countLeaves = (tree, count) => {
+  if(tree.right === null && tree.left === null){
+    return 1;
+  }
+  return countLeaves(tree.left)+ countLeaves(tree.right)
 }
 
 function Tree(val) {
