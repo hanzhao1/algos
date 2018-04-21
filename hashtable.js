@@ -29,8 +29,15 @@ var makeHashTable = function() {
     // TODO: implement `insert()`
   };
 
-  result.retrieve = function(/*...*/) {
+  result.retrieve = function(key) {
     // TODO: implement `retrieve()`
+    let hash = getIndexBelowMaxForKey(key, storageLimit);
+    return storage.reduce((retrieved, tuple) => {
+      if (tuple[0] === hash) {
+        retrieved = tuple[1];
+      }
+      return retrieved;
+    }, null);
   };
 
   result.remove = function(/*...*/) {
