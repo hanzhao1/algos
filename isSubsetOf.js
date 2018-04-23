@@ -22,5 +22,15 @@
 */
 
 Array.prototype.isSubsetOf = function (arr) {
-  // your code here
+  var i, j;
+
+  for (i = 0; i < this.length; i++) {
+
+    if (arr.includes(this[i])) {
+      continue;
+    } else {
+      return false;
+    }
+  }
+  return true;
 };
